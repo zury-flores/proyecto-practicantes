@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5$y7p@li1cjrh87z$o5dp8&pqz7aa0e4#)j7%2_$64hty1vxza
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['Zury23.pythonanywhere.com']
 
 
 # Application definition
@@ -123,6 +123,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://proyecto-practicantes.vercel.app"
 ]
