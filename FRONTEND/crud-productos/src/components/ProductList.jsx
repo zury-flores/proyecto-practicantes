@@ -28,21 +28,22 @@ useEffect(() => {
     return (
         <div className= "mt-8">
             <h1 className= "text-3xl font-bold text-sky-900">Productos Disponibles</h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 mt-5 gap-5 text-white">
+            <div className="grid grid-cols-1 md:grid-cols-3 mt-5 gap-5">
                 {products.map(product => (
-                    <div key ={product.id} className= "bg-sky-900 p-6 rounded-b-lg shadow">
+                    <div key ={product.id} className= "bg-sky-600 p-4 rounded-b-lg shadow text-white">
                         <p>{product.nombre}</p>
                         <p><span className="font-bold">Precio:</span> $ {product.precio}</p>
                         <p><span className="font-bold">Descripción:</span>{product.descripcion}</p>
+                        
                         <div className="mt-2">
 
-                            <button className="bg-sky-500 text-white font-bold px-2 py-1 rounded-lg"
+                            <button className="bg-green-400 text-white font-bold px-2 py-1 rounded-lg"
 
                             onClick={() => navigate(`/editar-producto/${product.id}`)}>Editar
                             
                             </button>
 
-                            <button className="bg-red-500 text-white font-bold px-2 py-1 rounded-lg ml-2"
+                            <button className="bg-red-400 text-white font-bold px-2 py-1 rounded-lg ml-2"
                             onClick={() => handleDelete(product.id)}
                             
                             >Eliminar</button>

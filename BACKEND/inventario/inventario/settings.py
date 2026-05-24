@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-5$y7p@li1cjrh87z$o5dp8&pqz7aa0e4#)j7%2_$64hty1vxza
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['Zury23.pythonanywhere.com']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'Zury23.pythonanywhere.com',
+]
 
 
 # Application definition
@@ -39,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'producto',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -76,14 +81,9 @@ WSGI_APPLICATION = 'inventario.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'proyecto_practicas',
-        'USER': 'postgres',
-        'PASSWORD': '12345',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',}
 }
 
 
@@ -127,5 +127,5 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://proyecto-practicantes.vercel.app"
+    "https://crud-productos-one.vercel.app",
 ]

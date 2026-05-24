@@ -3,7 +3,6 @@ import ProductList from "./components/ProductList";
 import ProductForm from "./components/ProductForm";
 import Header from "./components/Header";
 import {Toaster} from 'react-hot-toast'
-export default App
 
 function App() {
     return (
@@ -20,3 +19,5 @@ function App() {
         </BrowserRouter>
     );
 }
+
+export default App
