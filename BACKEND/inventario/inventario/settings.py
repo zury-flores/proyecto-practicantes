@@ -129,3 +129,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "https://crud-productos-one.vercel.app",
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://crud-productos-one.vercel.app",
+]
