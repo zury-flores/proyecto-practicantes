@@ -28,7 +28,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'Zury23.pythonanywhere.com',
+    'zury23.pythonanywhere.com',
 ]
 
 
