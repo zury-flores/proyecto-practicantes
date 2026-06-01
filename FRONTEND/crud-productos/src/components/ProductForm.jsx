@@ -57,7 +57,7 @@ export default function ProductForm() {
                     <label htmlFor="precio" className="block text-gray-700 font-bold mb-2">Precio:</label>
                     <input 
                     value={product.precio}
-                    type="number"
+                    type="text"
                     onChange={(e) => setProduct({...product, precio: Number(e.target.value)}) } 
                     id="precio" className="border border-gray-400 p-2 w-full" />
                 </div>
