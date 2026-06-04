@@ -106,16 +106,14 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://crud-productos-i0zv17uj8-zury-flores-projects.vercel.app",
+    "https://crud-productos-gamma.vercel.app",
 ]
-
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
-    "https://crud-productos-i0zv17uj8-zury-flores-projects.vercel.app",
+    "https://crud-productos-gamma.vercel.app",
 ]
 
 
