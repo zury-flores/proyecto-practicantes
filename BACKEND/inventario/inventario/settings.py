@@ -3,6 +3,7 @@ Django settings for inventario project.
 """
 
 from pathlib import Path
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -69,12 +70,27 @@ TEMPLATES = [
 WSGI_APPLICATION = 'inventario.wsgi.application'
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+import os
+
+if 'PYTHONANYWHERE_SITE' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'inventario_db',
+            'USER': 'postgres',
+            'PASSWORD': 'tu_password',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
 
 
 AUTH_PASSWORD_VALIDATORS = [
